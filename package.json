@@ -1,0 +1,17 @@
+{
+  "name": "platzi-media-player",
+  "version": "1.0.0",
+  "description": "Professional Javascript course Project",
+  "license": "MIT",
+  "author": "Victor Rivas <victor.rivas.sistemas@gmail.com>",
+  "keywords": [
+    "platzi"
+  ],
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependences": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
