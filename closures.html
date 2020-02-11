@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // IIFE (Immediately Invoked function expressions)
+            (() =>  {
+                let color = 'green'
+
+                function printColor() {
+                    console.log(color)
+                }
+
+                printColor();
+            })()
+
+            // This is a 'Closure'            
+            function makeColorPrinter(color) {
+                let colorMessage = `The color is ${color}`
+
+                return function() {
+                    console.log(colorMessage) // It's gonna remember the variable (closure)
+                }
+            }
+            
+            let greenColorPrinter = makeColorPrinter('green')
+            console.log(greenColorPrinter()) // NOTE: It's called as a function 'cause its return is an anonimous one
+            
+           /* Note: This function allows protect the private variable */
+            const makeCouter = (n) => {
+                let count = n // private property
+                return {
+                    increase: () => count = count + 1,
+                    decrease: () => count = count - 1,
+                    getCount: () => count
+                }
+            }
+
+            let counter = makeCouter(7)
+
+            console.log(`The count is: ${counter.getCount()}`)
+            counter.increase()
+            console.log(`The count is: ${counter.getCount()}`)
+            counter.decrease()
+            console.log(`The count is: ${counter.getCount()}`)            
+        </script>
+    </body>
+</html>
