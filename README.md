@@ -17,6 +17,7 @@ npm start
 Son funciones que regresan una función o un objeto con funciones que mantienen las variables que fueron declaradas fuera de su scope.
 
 Los closures nos sirven para tener algo parecido a variables privadas, característica que no tiene JavaScript por default. Es decir encapsulan variables que no pueden ser modificadas directamente por otros objetos, sólo por funciones pertenecientes al mismo.
+<<<<<<< HEAD
 [Example](closures.html#L22)
 
 ### Cómo llega un script al navegador
@@ -33,3 +34,6 @@ async. Con async podemos hacer la petición de forma asíncrona y no vamos a det
 defer. La petición es igual asíncrona como en el async pero va a deferir la ejecución del Javascript hasta el final de que se cargue todo el documento.
 Hay que tener en cuenta que cuando carga una página y se encuentra un script a ejecutar toda la carga se detiene. Por eso se recomienda agregar tus scripts justo antes de cerrar el body para que todo el documento esté disponible.
 ```
+=======
+[Example](closures.html#L34)
+>>>>>>> 8eaafcb026a1e18c18898fc7074a3d0108c8ee1b
