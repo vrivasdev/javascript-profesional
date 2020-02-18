@@ -7,7 +7,7 @@ function MediaPlayer(config) {
 
 MediaPlayer.prototype._initPlugins = function() {
     this.plugins.forEach(plugin => {
-        plugin.run(this.media)
+        plugin.run(this)
     })
 }
 
@@ -32,7 +32,7 @@ MediaPlayer.prototype.togglePlay = function() {
 }
 
 MediaPlayer.prototype.toggleMute = function() {    
-    this.media.muted? this.unmute() : this.mute()    
+    this.media.muted? this.unmute() : this.mute()
 }
 
 MediaPlayer.prototype.mute = function() {
