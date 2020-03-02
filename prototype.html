@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*const zelda = { 
+                name: 'Zelda'
+            }
+
+            zelda.saludar = function() {
+                console.log(`Hello I'm ${this.name}`)
+            }
+
+            zelda.saludar()
+
+            const link = { 
+                name: 'Link'
+            }
+
+            link.saludar = function() {
+                console.log(`Hello I'm ${this.name}`)
+            }
+
+            link.saludar()*/
+
+            /*****************************************************/
+            function Hero(name) {
+                const hero = {
+                    name: name
+                }
+
+                hero.greet = function() {
+                    console.log(`Hello I'm ${name}`)
+                }
+
+                return hero
+            }
+
+            const zelda = Hero('Zelda')
+            zelda.greet()
+
+            const link = Hero('Link')
+            link.greet()
+
+        </script>
+    </body>
+</html>
