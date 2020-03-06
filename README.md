@@ -96,3 +96,26 @@ El JS Engine recibe el código fuente y lo procesa de la siguiente manera:
 - Un SyntaxError es lanzado cuando el motor JavaScript encuentra partes que no forman parte de la sintaxis del lenguaje y esto lo logra gracias a que se tiene un AST generado por el parser.
 
 - El parser es del 15% al 20% del proceso de ejecución por lo que hay que usar parser del código justo en el momento que lo necesitamos y no antes de saber si se va a usar o no.
+
+### Cómo funciona el JavaScript Engine
+
+- Una vez tenemos el AST ahora hay que convertirlo a Bytecode.
+
+- Bytecode es como el código assembler pero en lugar de operar en el procesador opera en la máquina virtual V8 del navegador.
+
+- Machine code es el más bajo nivel, es código binario que va directo al procesador.
+
+- El profiler se sitúa en medio del bytecode y el optimizador
+
+- Cada máquina virtual tiene sus particularidades, por ejemplo V8 tiene algo llamado Hot Functions.
+
+- Cuando una sentencia función es ejecutada muy frecuentemente, V8 la denomina como una hot function y hace una optimización que consiste en convertirla a machine code para no tener que interpretarla de nuevo y agilizar su ejecución.
+
+- Cada navegador tiene su implementación de JavaScript Engine:
+
+```
+SpiderMonkey - Firefox
+Chackra - Edge
+JavaScriptCore - Safari
+V8 - Chrome
+```
