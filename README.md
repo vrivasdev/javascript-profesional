@@ -143,8 +143,8 @@ V8 - Chrome
 - Sirve para observar elementos y si cruzan un umbral que nosotros definimos nos lo va a notificar para tomar acción.
 
 - El umbral se define por el porcentaje que tiene intersección con el viewport, con la parte visible de nuestra página.
-Ex:(assets/plugins/AutoPause.js#9)
+Ex:(assets/plugins/AutoPause.js#L9)
 
 ### Visibility Change
 - El visibilityChange forma parte del API del DOM llamado Page Visibility y nos deja saber si el elemento es visible, pude ser usado para ejecutar una acción cuando cambiamos de pestaña. Así podemos ahorrar batería y mejorar la UX.
-Ex:(assets/plugins/AutoPause.js#16)
+Ex:(assets/plugins/AutoPause.js#L16)
