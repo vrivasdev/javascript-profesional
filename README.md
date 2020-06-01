@@ -137,3 +137,10 @@ V8 - Chrome
 - MicroTask Queue. Aquí se agregan las promesas. Esta Queue es la que tiene mayor prioridad.
 
 - El Event Loop es un loop que está ejecutando todo el tiempo y pasa periódicamente revisando las queues y el stack moviendo tareas entre estas dos estructuras.
+
+### Intersection Observer
+
+- Sirve para observar elementos y si cruzan un umbral que nosotros definimos nos lo va a notificar para tomar acción.
+
+- El umbral se define por el porcentaje que tiene intersección con el viewport, con la parte visible de nuestra página.
+Ex:(assets/plugins/AutoPause.js#9)
