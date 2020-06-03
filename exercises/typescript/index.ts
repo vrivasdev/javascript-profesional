@@ -1,7 +1,37 @@
-console.log("Hello, TypeScript")
+// Booleans
+let muted: boolean = true;
+muted = false;
+ // Numbers
+let numerador: number = 42;
+let denominador: number = 6;
+let result = numerador / denominador;
 
-function add(a: number, b:number) {
-    return a + b;
+// Strings
+let nombre: string = 'Richard';
+let saludo = `Me llamo ${nombre}`;
+
+// Arrays
+let people: string[] = [];
+people = ['Isable', 'Carlos', 'Victor'];
+people.push("9000");
+
+let peopleAndNumbers: Array<string | number> = [];
+peopleAndNumbers.push('Ricardo');
+peopleAndNumbers.push(2);
+
+// Enum
+enum Color {
+    Red = "Red",
+    Green = "Green",
+    Blue = "Blue"
 }
 
-const sum = add(2, 2)
+let favoriteColor: Color = Color.Red;
+console.log(`My favorite color is ${favoriteColor}`);
+
+// Any
+let test: any = "Joker";
+test = { type: 'Wildcard' }; 
+
+// Object
+let res: object = { type: 'Wildcard' };
