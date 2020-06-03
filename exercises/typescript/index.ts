@@ -36,7 +36,7 @@ test = { type: 'Wildcard' };
 // Object
 let res: object = { type: 'Wildcard' };
 
-// ******************* Functions *********************
+// ******************* Return type functions *********************
 function add(a: number, b: number): number {
     return a + b;
 }
@@ -59,3 +59,28 @@ function fullName(firstName: string, lastName: string = 'Smith'): string { // la
 const victor = fullName('Victor');
 console.log(victor);
 
+// ************************** Interfaces ******************************
+interface Rectangle {
+    width: number
+    height: number,
+    color?: Color
+}
+
+let rectangle: Rectangle = {
+    width: 4,
+    height: 6,
+    //color: Color.Red
+};
+
+function area(r: Rectangle): number {
+    return r.height * r.width;
+}
+
+const areaRect = area(rectangle);
+console.log(areaRect);
+
+rectangle.toString = function() {
+    return this.color ? `Rectangle ${this.color}` : `Rectangle`;
+}
+
+console.log(rectangle.toString());
