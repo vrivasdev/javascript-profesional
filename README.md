@@ -148,3 +148,37 @@ Ex:(assets/plugins/AutoPause.js#L9)
 ### Visibility Change
 - El visibilityChange forma parte del API del DOM llamado Page Visibility y nos deja saber si el elemento es visible, pude ser usado para ejecutar una acción cuando cambiamos de pestaña. Así podemos ahorrar batería y mejorar la UX.
 Ex:(assets/plugins/AutoPause.js#L16)
+
+### Software Patterns:
+
+### Creational Patterns 
+ Allow different types of mechanisms for object creation
+ - Abstract Factory
+ - Builder: It allows a variety of complex objects from a source object
+ - Factory Method
+ - Prototype
+ - Singleton
+
+### Structurational Pattterns
+ Describe a new object composing ways to create new flexible and efficient structures
+ - Adapter
+ - Bridge
+ - Composite
+ - Decorator
+ - Facade
+ - Flyweight
+ - Proxy
+
+### Behavioral Patterns
+Manage algorithms and responsability between objects
+- Chain of Responsability
+- Command
+- Interpreter
+- Iterator
+- Meiator
+- Memento
+- Observer
+- State
+- Strategy
+- Template Method
+- Visitor
