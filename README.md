@@ -157,7 +157,7 @@ Ex:(assets/plugins/AutoPause.js#L16)
  - Builder: It allows a variety of complex objects from a source object
  - Factory Method
  - Prototype
- - Singleton
+ - Singleton: It generates one instance per each class. That instance can be consumed by any object
 
 ### Structurational Pattterns
  Describe a new object composing ways to create new flexible and efficient structures
