@@ -12,4 +12,4 @@ class Singleton {
     }
 }
 
-export default Singleton;
+export default Singleton
