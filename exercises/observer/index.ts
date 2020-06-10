@@ -22,7 +22,7 @@ class BitcoinPrice implements Subject {
     unsubscribe(observer: Observer) {
         const index = this.observers
                           .findIndex(obs => obs === observer);
-        this.observers.splice(index, 1);
+        this.observers.splice(index, 1);    
     }
 
     notify(data: any) {
