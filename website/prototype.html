@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*const zelda = { 
+                name: 'Zelda'
+            }
+
+            zelda.saludar = function() {
+                console.log(`Hello I'm ${this.name}`)
+            }
+
+            zelda.saludar()
+
+            const link = { 
+                name: 'Link'
+            }
+
+            link.saludar = function() {
+                console.log(`Hello I'm ${this.name}`)
+            }
+
+            link.saludar()*/
+
+            /*****************************************************/
+             /* 
+             function Hero(name) {
+                const hero = {
+                    name: name
+                }
+
+                hero.greet = function() {
+                    console.log(`Hello I'm ${name}`)
+                }
+
+                return hero
+            }
+
+            const zelda = Hero('Zelda')
+            zelda.greet()
+
+            const link = Hero('Link')
+            link.greet()
+            */
+            /**************************************************************/
+            /*const heroMethods = {
+                greet: function() {
+                    console.log(`I am super hero ${this.name}`)
+                }
+            }
+            
+            function Hero(name) {
+                const hero = Object.create(heroMethods)
+                hero.name = name
+
+                return hero
+            }
+
+            const zelda = Hero('Zelda')
+            zelda.greet()
+
+            const link = Hero('Link')
+            link.greet()*/
+            /***************************************************************/                    
+            /*function Hero(name) {
+                const hero = Object.create(Hero.prototype)
+                hero.name = name
+
+                return hero
+            }
+
+            Hero.prototype.greet = function() {
+                console.log(`I am super hero ${this.name}`)
+            }
+
+            const zelda = Hero('Zelda')
+            zelda.greet()
+
+            const link = Hero('Link')
+            link.greet() */
+            /**********************************************************/
+            function Hero(name) {
+                this.name = name // const hero = Object.create(Hero.prototype) "This" is implicit when "new" is called               
+            }
+
+            Hero.prototype.greet = function() {
+                console.log(`I am super hero ${this.name}`)
+            }
+
+            const zelda = new Hero('Zelda')
+            zelda.greet()
+
+            const link = new Hero('Link')
+            link.greet()
+            
+
+        </script>
+    </body>
+</html>

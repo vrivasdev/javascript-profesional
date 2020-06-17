@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function Hero(name) {
+                this.name = name // const hero = Object.create(Hero.prototype) "This" is implicit when "new" is called               
+            }
+
+            Hero.prototype.greet = function() {
+                console.log(`I am super hero ${this.name}`)
+            }
+
+            const zelda = new Hero('Zelda')
+
+            Hero.prototype.fight = function() {console.log('Fight!')}
+
+            const prototypeOfZelda = Object.getPrototypeOf(Hero.prototype)
+            const prototypeOfPrototypeOfZelda = Object.getPrototypeOf(Hero.prototype)
+            
+            console.log(prototypeOfZelda.hasOwnProperty('toString'));
+
+            console.log(Hero.prototype.hasOwnProperty('fight'));
+
+        </script>
+    </body>
+</html>

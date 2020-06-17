@@ -1,0 +1,24 @@
+{
+  "name": "platzi-media-player",
+  "version": "1.0.0",
+  "description": "Professional Javascript course Project",
+  "license": "MIT",
+  "author": "Victor Rivas <victor.rivas.sistemas@gmail.com>",
+  "keywords": [
+    "platzi"
+  ],
+  "scripts": {
+    "start": "parcel index.html exercises/index.html exercises/**/*.html"
+  },
+  "devDependences": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "dependencies": {
+    "@vrivasdev/platzimediaplayer": "^1.0.0"
+  }
+}

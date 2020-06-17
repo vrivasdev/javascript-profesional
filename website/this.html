@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>This</title>
+    </head>
+    <body>
+        <script>
+            console.log(`this: ${this}`)
+
+            function whoIsThis() {
+                return this
+            }
+
+            console.log(`who is this: ${whoIsThis()}`)
+            
+            function whoIsThisStrict() {
+                "use strict"; // 'this' is not windows anymore
+                return this
+            }
+
+            console.log(`who is this: ${whoIsThisStrict()}`)
+            /* A: This works over object instance */
+            const person = {
+                name: 'Grabriel',
+                saludar: function() {
+                    console.log(`Hello ${this.name}`)
+                }
+            }
+
+            person.saludar()
+
+            const action = person.saludar // context is lost
+            action()
+            /******** B: Prototypale instance of this over class instance *************/
+            function Person(name) {
+                this.name = name
+            }
+
+            Person.prototype.saludar = function() {
+                console.log(`Me llamo ${this.name}`)
+            }
+
+            const angela = new Person('Angela')
+            angela.saludar()
+
+        </script>
+    </body>
+</html>

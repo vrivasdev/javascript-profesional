@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <li><button class="call-to-action">Learn</button></li>
+            <li><button class="call-to-action">Learn more</button></li>
+            <li><button class="call-to-action">Never stop learning!</button></li>
+        </ul>
+        <script>
+            function greetings() {
+                console.log(`Hello. I'm ${this.name} ${this.lastname}`)
+            }
+
+            const victor = {
+                name: 'Victor',
+                lastname: 'Rivas'
+            }
+
+            greetings.call(victor);
+
+            function walk(meters, direction) {
+                console.log(`${this.name} walks ${meters} mts to ${direction}`)
+            }
+
+            walk.call(victor, 400, 'north')
+
+            const vals = [800, 'south']
+            walk.apply(victor, vals)
+
+            const carlos = {name: 'Carlos', lastname: 'Sanchez'}
+            const carlosSayHi = greetings.bind(victor)
+            carlosSayHi()
+
+            const carlosWalks = walk.bind(victor, 2000)
+            carlosWalks('north')
+
+            /*********************************************/
+            const buttons = document.getElementsByClassName('call-to-action')
+            Array.prototype.forEach.call(buttons, button => button.onclick = () => alert('Never stop learning'))
+
+        </script>
+    </body>
+</html>
